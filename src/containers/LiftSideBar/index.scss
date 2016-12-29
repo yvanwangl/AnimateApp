@@ -1,0 +1,18 @@
+.liftSideBar {
+    width: 20%;
+    max-width: 300px;
+    min-width: 240px;
+    background-color: rgba(43, 49, 68, 0.8);
+    position: fixed;
+    left:0;
+    top:0;
+    bottom: 0;
+    & .photolytics {
+        color: #fff;
+        text-align: center;
+        height: 58px;
+        line-height: 58px;
+        font-size: 20px;
+        background-color: #2c3144;
+    }
+}
