@@ -7,9 +7,10 @@ import {
     listItemActive,
     iconStyle,
     iconStyleActive,
+    nestItemStyle
 } from './Config';
 
-export default class TreeMenu extends Component {
+export default class MenuNest extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -32,10 +33,20 @@ export default class TreeMenu extends Component {
                     listText.map(([text, icon], index)=>
                         <ListItem
                             key={index}
-                            style={tabIndex==index?listItemActive:listItemStyle}
+                            style={listItemStyle}
                             primaryText={text}
-                            leftIcon={<Icon type={icon} style={tabIndex==index?iconStyleActive:iconStyle}/>}
+                            leftIcon={<Icon type={icon} style={iconStyle}/>}
+                            rightIcon={<Icon type='play' style={{...iconStyle, transform:'rotate(90deg)',width:15,height:16}}/>}
                             onTouchTap={()=>this.itemTap(index)}
+                            primaryTogglesNestedList={true}
+                            nestedItems={[
+                                <ListItem
+                                    key={index}
+                                    style={nestItemStyle}
+                                    primaryText="Drafts"
+                                    leftIcon={<Icon type={icon} style={iconStyle}/>}
+                                />,
+                            ]}
                         />
                     )
                 }
