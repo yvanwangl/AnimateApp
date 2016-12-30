@@ -1,12 +1,12 @@
-.liftSideBar {
-  width: 240px;
+.rightSideBar {
+  width: 300px;
   background-color: #2b3144;
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   bottom: 0;
   z-index: 100; }
-  .liftSideBar .photolytics {
+  .rightSideBar .photolytics {
     color: #fff;
     text-align: center;
     height: 58px;
