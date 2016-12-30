@@ -1,0 +1,13 @@
+.swiper-container {
+    width: 100%;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom, .swiper-pagination-fraction {
+    height: 58px;
+    line-height: 58px;
+    bottom: 3px;
+    background-color: rgba(60, 113, 160, 0.8);
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    transform: translate(500px ,0);
+}

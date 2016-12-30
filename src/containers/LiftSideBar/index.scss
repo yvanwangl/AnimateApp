@@ -1,12 +1,12 @@
 .liftSideBar {
-    width: 20%;
-    max-width: 300px;
-    min-width: 240px;
-    background-color: rgba(43, 49, 68, 0.8);
+    width: 240px;
+    background-color: rgba(43, 49, 68, 1);
     position: fixed;
     left:0;
     top:0;
     bottom: 0;
+    z-index: 100;
+    //overflow-y: scroll;
     & .photolytics {
         color: #fff;
         text-align: center;
