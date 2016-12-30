@@ -2,11 +2,10 @@
  * Created by wyf on 2016/12/29.
  */
 const listText = [
-    ['Custom Reports', 'description'],
-    ['Dashboard', 'trendingUp'],
-    ['User Activity', 'person'],
-    ['Content Send', 'share'],
-    ['Downloads', 'download'],
+    ['Upload Photo', 'upload'],
+    ['Collections', 'collections'],
+    ['Directory', 'directory'],
+    ['Catalog', 'layers'],
 ];
 
 const listItemStyle = {
@@ -15,7 +14,7 @@ const listItemStyle = {
     fontSize:14,
     height:50,
     borderLeft:'4px solid transparent',
-    backgroundColor: 'rgba(35, 40, 57, 0.8)',
+    backgroundColor: '#2C3144',
 };
 
 const listItemActive = {
@@ -23,6 +22,12 @@ const listItemActive = {
     color: '#fff',
     backgroundColor: 'rgba(68, 76, 104, 0.8)',
     borderLeft:'4px solid #f5881e'
+};
+
+const nestItemStyle = {
+    ...listItemStyle,
+    margin: '-8px 0',
+    backgroundColor:'#2F3B52',
 };
 
 const iconStyle={
@@ -41,4 +46,5 @@ export {
     listItemActive,
     iconStyle,
     iconStyleActive,
+    nestItemStyle,
 };

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
-import picture from './picture.png';
 import LiftSideBar from './containers/LiftSideBar/LiftSideBar';
+import MainContent from './containers/MainContent/MainContent';
+import RightSideBar from './containers/RightSideBar/RightSideBar';
 import './App.css';
 
 class App extends Component {
@@ -9,10 +9,8 @@ class App extends Component {
         return (
             <div className="App">
                 <LiftSideBar />
-                <div className="App-header">
-                    <img src={picture} alt="logo"/>
-                    <h2>A React Animate App</h2>
-                </div>
+                <MainContent />
+                <RightSideBar />
             </div>
         );
     }
