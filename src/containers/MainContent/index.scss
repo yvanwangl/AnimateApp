@@ -1,4 +1,7 @@
-.mainContent img {
-    width: 100%;
-    z-index: 50;
+.mainContent {
+    padding-top: 58px;
+    & img {
+        width: 100%;
+        z-index: 50;
+    }
 }

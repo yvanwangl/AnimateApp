@@ -1,0 +1,32 @@
+.item {
+    cursor: pointer;
+    height: 100px;
+    position: relative;
+    color: #fff;
+}
+.evenItem {
+    background-color: rgba(42, 112, 173, 0.9);
+}
+.oddItem {
+    background-color: rgba(27, 110, 180, 0.6);
+}
+.viewText {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 12px;
+}
+.viewPic {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 10px;
+    font-size: 36px;
+}
+.iconStyle {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right:20px;
+    fill: #99cbf5 !important;
+}
