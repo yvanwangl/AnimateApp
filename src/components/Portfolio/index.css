@@ -1,5 +1,8 @@
 .portfolio {
   margin: -3px 300px 0 240px;
   z-index: 50; }
+  .portfolio .appBar svg {
+    fill: #b7b5b5 !important;
+    transform: rotate(90deg); }
 
 /*# sourceMappingURL=index.css.map */

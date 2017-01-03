@@ -30,11 +30,23 @@ const styles = {
         color:'#9b9b9b'
     },
     likeStyle: {
-        fill: 'red'
+        fill: 'red',
+        marginLeft:0
+    },
+    likeTextStyle: {
+        float:'left',
+        minWidth:'36px',
+        color: '#67b8e5',
     },
     unlikeStyle: {
-        fill: '#000'
-    }
+        fill: '#d3e6f0',
+        marginLeft:0
+    },
+    unLikeTextStyle: {
+        float:'left',
+        minWidth:'36px',
+        color: '#ccc',
+    },
 };
 
 export default class CardItem extends Component {
@@ -63,8 +75,18 @@ export default class CardItem extends Component {
                         Lorem ipsum dolor
                     </CardText>
                     <CardActions style={{padding:0}}>
-                        <FlatButton style={{float:'left',minWidth:'36px'}} icon={<Icon type='like' style={this.state.like?styles.likeStyle:styles.unlikeStyle}/>} onTouchTap={this.itemTap} />
-                        <FlatButton style={{float:'right',minWidth:'36px'}} icon={<Icon type='moreH'/>} />
+                        <FlatButton
+                            style={this.state.like?styles.likeTextStyle:styles.unLikeTextStyle}
+                            icon={<Icon type='like' style={this.state.like?styles.likeStyle:styles.unlikeStyle}/>}
+                            onTouchTap={this.itemTap}
+                            secondary={true}
+                            label="255"
+                            labelStyle={{paddingLeft:3}}
+                        />
+                        <FlatButton
+                            style={{float:'right',minWidth:'36px'}}
+                            icon={<Icon type='moreH'/>}
+                        />
                         {/*<Checkbox
                             checkedIcon={<ActionFavorite />}
                             uncheckedIcon={<ActionFavoriteBorder />}
