@@ -11,7 +11,7 @@ export default class PortfolioContent extends Component {
         return (
             <div className="portfolioContent">
                 {
-                    [1,2,3,4,5,6,7,8,8,8,1,2,3,4,5].map((num)=><CardItem/>)
+                    [1,2,3,4,5,6,7,8,8,8,1,2,3,4,5].map((num, index)=><CardItem key={index}/>)
                 }
             </div>
         );

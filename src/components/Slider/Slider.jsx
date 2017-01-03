@@ -27,8 +27,8 @@ export default class Slider extends Component {
             <div className="swiper-container">
                 <div className="swiper-wrapper">
                     {
-                        [1,2,3,4,5].map(num=>
-                            <div className="swiper-slide">{image}</div>
+                        [1,2,3,4,5].map((num, index)=>
+                            <div className="swiper-slide" key={index}>{image}</div>
                         )
                     }
                 </div>
