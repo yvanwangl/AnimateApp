@@ -21,7 +21,7 @@ export default class RightSideBar extends Component {
     render() {
         return (
             <div className="rightSideBar">
-                <div style={{backgroundColor:'#fff', height:58}}></div>
+                <div style={{backgroundColor: '#fff', height: 58}}></div>
                 <TotalViewList />
                 <p style={myCount}>View More</p>
             </div>
