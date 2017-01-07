@@ -15,36 +15,36 @@ const styles = {
     checkbox: {
         marginBottom: 16,
         display: 'inline-block',
-        width:'auto'
+        width: 'auto'
     },
-    cardStyle:{
+    cardStyle: {
         display: 'inline-block',
         width: '208px',
         height: '208px',
         margin: '22px',
-        padding:'8px',
+        padding: '8px',
     },
     cardText: {
-        textAlign:'left',
-        padding:'10px 0 8px 0',
-        color:'#9b9b9b'
+        textAlign: 'left',
+        padding: '10px 0 8px 0',
+        color: '#9b9b9b'
     },
     likeStyle: {
         fill: 'red',
-        marginLeft:0
+        marginLeft: 0
     },
     likeTextStyle: {
-        float:'left',
-        minWidth:'36px',
+        float: 'left',
+        minWidth: '36px',
         color: '#67b8e5',
     },
     unlikeStyle: {
         fill: '#d3e6f0',
-        marginLeft:0
+        marginLeft: 0
     },
     unLikeTextStyle: {
-        float:'left',
-        minWidth:'36px',
+        float: 'left',
+        minWidth: '36px',
         color: '#ccc',
     },
 };
@@ -53,12 +53,12 @@ export default class CardItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            like:false
+            like: false
         };
         this.itemTap = this.itemTap.bind(this);
     }
 
-    itemTap(){
+    itemTap() {
         this.setState({
             like: !this.state.like
         });
@@ -68,31 +68,31 @@ export default class CardItem extends Component {
         return (
             <div className="cardItem">
                 <Card style={styles.cardStyle}>
-                    <CardMedia style={{height:120}}>
-                        <img src={picture} style={{height:120}}/>
+                    <CardMedia style={{height: 120}}>
+                        <img src={picture} style={{height: 120}}/>
                     </CardMedia>
                     <CardText style={styles.cardText}>
                         Lorem ipsum dolor
                     </CardText>
-                    <CardActions style={{padding:0}}>
+                    <CardActions style={{padding: 0}}>
                         <FlatButton
-                            style={this.state.like?styles.likeTextStyle:styles.unLikeTextStyle}
-                            icon={<Icon type='like' style={this.state.like?styles.likeStyle:styles.unlikeStyle}/>}
+                            style={this.state.like ? styles.likeTextStyle : styles.unLikeTextStyle}
+                            icon={<Icon type='like' style={this.state.like ? styles.likeStyle : styles.unlikeStyle}/>}
                             onTouchTap={this.itemTap}
                             secondary={true}
                             label="255"
-                            labelStyle={{paddingLeft:3}}
+                            labelStyle={{paddingLeft: 3}}
                         />
                         <FlatButton
-                            style={{float:'right',minWidth:'36px'}}
+                            style={{float: 'right', minWidth: '36px'}}
                             icon={<Icon type='moreH'/>}
                         />
                         {/*<Checkbox
-                            checkedIcon={<ActionFavorite />}
-                            uncheckedIcon={<ActionFavoriteBorder />}
-                            style={styles.checkbox}
-                        />
-                        <Icon type='moreH' style={{display:'inline-block'}}/>*/}
+                         checkedIcon={<ActionFavorite />}
+                         uncheckedIcon={<ActionFavoriteBorder />}
+                         style={styles.checkbox}
+                         />
+                         <Icon type='moreH' style={{display:'inline-block'}}/>*/}
                     </CardActions>
                 </Card>
             </div>

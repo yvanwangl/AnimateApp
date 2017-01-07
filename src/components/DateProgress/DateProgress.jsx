@@ -11,15 +11,22 @@ export default class DateProgress extends Component {
         return (
             <div>
                 {
-                    [1,1,1,1].map((num,index)=>
+                    [1, 1, 1, 1].map((num, index)=>
                         <Slider
                             disabled={true}
-                            style={{display:'inline-block',width:60}}
+                            style={{display: 'inline-block', width: 60}}
                             key={index}
                         />
                     )
                 }
-                <span style={{display:'inline-block',width:10,height:10,backgroundColor:'red',height:90,verticalAlign:'top'}}></span>
+                <span style={{
+                    display: 'inline-block',
+                    width: 10,
+                    height: 10,
+                    backgroundColor: 'red',
+                    height: 90,
+                    verticalAlign: 'top'
+                }}></span>
             </div>
         );
     }

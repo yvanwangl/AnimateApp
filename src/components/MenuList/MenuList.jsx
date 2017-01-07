@@ -18,23 +18,23 @@ export default class MenuList extends Component {
         this.itemTap = this.itemTap.bind(this);
     }
 
-    itemTap(index){
+    itemTap(index) {
         this.setState({
-            tabIndex:index
+            tabIndex: index
         });
     }
 
     render() {
         const tabIndex = this.state.tabIndex;
         return (
-            <List style={{padding:0}}>
+            <List style={{padding: 0}}>
                 {
                     listText.map(([text, icon], index)=>
                         <ListItem
                             key={index}
-                            style={tabIndex==index?listItemActive:listItemStyle}
+                            style={tabIndex == index ? listItemActive : listItemStyle}
                             primaryText={text}
-                            leftIcon={<Icon type={icon} style={tabIndex==index?iconStyleActive:iconStyle}/>}
+                            leftIcon={<Icon type={icon} style={tabIndex == index ? iconStyleActive : iconStyle}/>}
                             onTouchTap={()=>this.itemTap(index)}
                         />
                     )

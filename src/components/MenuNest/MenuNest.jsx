@@ -19,9 +19,9 @@ export default class MenuNest extends Component {
         this.itemTap = this.itemTap.bind(this);
     }
 
-    itemTap(index){
+    itemTap(index) {
         this.setState({
-            tabIndex:index
+            tabIndex: index
         });
     }
 
@@ -36,7 +36,12 @@ export default class MenuNest extends Component {
                             style={listItemStyle}
                             primaryText={text}
                             leftIcon={<Icon type={icon} style={iconStyle}/>}
-                            rightIcon={<Icon type='play' style={{...iconStyle, transform:'rotate(90deg)',width:15,height:16}}/>}
+                            rightIcon={<Icon type='play' style={{
+                                ...iconStyle,
+                                transform: 'rotate(90deg)',
+                                width: 15,
+                                height: 16
+                            }}/>}
                             onTouchTap={()=>this.itemTap(index)}
                             primaryTogglesNestedList={true}
                             nestedItems={[
